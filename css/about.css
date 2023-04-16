@@ -1,0 +1,191 @@
+body{
+   margin: 0px;
+   padding: 0px;
+}
+header{
+    background-color: rgba(9, 16, 63, 0.867);
+    display: flex;
+    justify-content: space-between;
+}
+.logo_head img{
+    max-width: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 10px;
+}
+.menu_head ul{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+.menu_head ul li{
+    list-style: none;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid rgba(9, 16, 63, 0.867) ;
+    background-color: #fff;
+    border-radius: 15px;
+    height: 25px;
+    width: auto;
+    transition: all 1s;
+
+}
+.menu_head ul li:hover{
+    background-color: #ccc;
+}
+li a{
+    
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0px 20px;
+   
+}
+.acceuil{
+    background-image: url("../image/univ_bat.jpg");
+    width: 100%;
+    height: 650px;
+    z-index: 100;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -45px;
+}
+.acceuil h1{
+    padding-top: 400px;
+    padding-right: 100px;
+}
+.univers{
+    background-color: #1C3CA1;
+    margin-top: -20px;
+    background-image: url("../image/img_bg_4.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   /* background-size: contain; */
+}
+table{
+    margin: 10px 10px ;
+    width: 98%;
+    position: static;
+}
+table, th, td{
+    border: 1px solid #fff;
+    border-collapse: collapse;
+}
+th{
+    font-size: 2rem;
+    height: 50px;
+    color: #fff;
+    text-transform: uppercase;
+}
+td{
+    width: 400px;
+    height: 350px;
+    position: static;
+}
+td p{
+    
+    width: 80%;
+    padding: 20px;
+    margin-left: 15px;
+    height:300px ;
+    color: #fff;
+    font-size: 18px;
+}
+td:hover p{
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 4px rgba(165, 8, 8, 0.993);
+}
+.coulisse{
+    display: flex;
+    justify-content: space-around;
+}
+.coulisse img{
+    width: 400px;
+}
+span{
+    color: #000;
+    border: 1px solid orangered;
+    padding: 10px 50px ;
+    
+}
+.coulisse h2{
+    color: black;
+}
+  .realisation{
+    display:flex ;
+    justify-content: center;
+    gap: 100px;
+    background-image:url("../image/info.webp") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+    margin-top: -115px;
+    z-index: 10;
+  }
+  .realisation img{
+    border-radius: 50%;
+    margin-left: 40px;
+    max-width: 80px;
+    opacity: 0.7;
+  }
+  h1{
+    text-transform: uppercase;
+    margin-left: 35%;
+    color: #fff;
+    font-size: 3rem;
+  }
+  p, h2{
+    text-align: center;
+    color: #fff;
+  }
+  .prof{
+    background-image: url("../image/homme1.jpg");
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -15px;
+    z-index: 100;
+}
+.prof div{
+    display: flex;
+    flex-direction: row-reverse;
+    /* justify-content: space-around; */
+    gap: 100px;
+    margin: 0rem 5rem;
+}
+  .prof img{
+    max-width: 30%;
+    /* border-radius: 50%; */
+    /* margin-left: 75%; */
+    /* margin-left: 10% ; */
+    background-color: transparent;
+    border-radius: 15px;
+}
+.prof h1{
+    color: #fff;
+}
+.prof p{
+    color: #fff;
+    /* margin-top: 10px; */
+    /* margin-left: 3rem; */
+    font-size: 20px;
+}
+  footer{
+    background-color: #429ac4c0;
+    margin: 0pc;
+    display: flex;
+    justify-content: space-around;
+   
+}
+footer img{
+    margin-top: 15px;
+    max-width: 50px;
+    border-radius: 50%;
+}
+footer p{
+    font-family: "Ubuntu";
+    font-size: 2rem;
+    /* color: #fff; */
+}

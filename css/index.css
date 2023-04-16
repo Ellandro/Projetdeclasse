@@ -1,0 +1,248 @@
+
+@font-face {
+    font-family: ubuntu;
+    src: url("//font/Ubuntu-Regular.ttf");
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    /* background-color: rgba(9, 16, 63, 0.867); */
+
+}
+@keyframes fonds{
+    0%{
+        background-image: url("../image/Composant-13-10.png");
+    }
+    25%{
+        background-image: url("../image/Composant-13-11.png");
+    }
+    50%{
+        background-image: url("../image/robor.jpg");
+    }
+    75%{
+        background-image: url("../image/Composant-13-13.png");
+    }
+    100%{
+        background-image: url("../image/etudiant.jpg");
+    }
+}
+/* Définir la largeur de la barre de défilement */
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  /* Définir la couleur du "pouce" de la barre de défilement */
+  ::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    
+  }
+  
+header{
+    background-color: rgba(9, 16, 63, 0.867);
+    display: flex;
+    justify-content: space-between;
+}
+.logo_head img{
+    max-width: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 10px;
+}
+/* nav{
+    margin-left: 585px;
+}
+nav ul{
+   
+    margin-top: 30px;
+    margin-left: 0px;
+}
+nav ul li{
+    list-style: none;
+    margin-right: 30px;
+    border: 1px solid  rgba(9, 16, 63, 0.867);
+    background-color: #fff;
+    border-radius: 15px;
+    height: 30px;
+ 
+}
+nav ul ul{
+    display: none;
+}
+nav ul ul li{
+    position: block;
+    margin-top: 1px;
+    border: none;
+    
+}
+nav ul li:hover{
+    border-radius: 15px 15px 0px 15px;
+    position: static;
+}
+nav ul li:hover ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 0px 0px 15px 15px;
+} */
+
+.menu_head ul{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+.menu_head ul li{
+    list-style: none;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid rgba(9, 16, 63, 0.867) ;
+    background-color: #fff;
+    border-radius: 15px;
+    height: 25px;
+    width: auto;
+    transition: all 1s;
+
+}
+.menu_head ul li:hover{
+    background-color: #ccc;
+}
+
+li a{
+    
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0px 20px;
+   
+}
+.text-prem{
+    background-image: url("../image/elliot_astronaute2.jpg");
+    animation-name: fonds;
+    animation-delay: 0.2s;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    /* padding: 0px;
+    margin: 0px; */
+    transition: all 1s;
+}
+.text_pre h3{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    color: #fff;
+    margin-left: 10%;
+}
+.text_pre p{
+    margin-left: 5%;
+    color: #fff;
+    font-size: 20px;
+    font-family: "Ubuntu";
+}
+.text_pre{
+    background-color: rgb(9, 29, 83);
+    width: 100%;
+    margin-top: -50px;
+    height: 210px;
+}
+h1{
+    text-align: center;
+    color: #0a0a0a;
+    text-transform: uppercase;
+}
+h3{
+    font-size: 2rem;
+    color: #fff;
+}
+.sous-parcours img{
+    width: 100%;
+    margin-top: 50px;
+    transition: all 0.5s linear;
+}
+.sous-parcours img:hover{
+    filter:grayscale(0.5);
+}
+.parcours{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.sous-parcours{
+    display: flex;
+    gap: 15px;
+    flex-direction: row-reverse;
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
+    /* display: flex; */
+   
+    
+}
+
+.sous{
+     /* border: 2px  solid #131212; */
+     margin-top: 20px;
+}
+.sous li{
+    list-style: none;
+    border: 1px solid black;
+    width: 5rem;
+    padding: 10px;
+    transition: all 1s;
+}
+.sous li:hover{
+    background-color: #0a0a0a;
+    color: #fff;
+    cursor: pointer;
+}
+
+.univers{
+    width: 100%;
+}
+
+@keyframes defilement {
+    0%{
+       transform: translateX(0); 
+    }100%{
+        transform: translate(-50%);
+    }
+}
+.partenaire ul{
+    display: flex;
+    gap: 60px;
+    overflow: hidden;
+    animation: defilement 20s linear 0.5s infinite;
+}
+.partenaire ul li{
+    list-style: none;
+}
+.partenaire ul li img{
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+.partenaire ul li #mit{
+    margin-bottom: 65px;
+}
+footer{
+    background-color: #ccc;
+    margin: 0pc;
+    display: flex;
+    justify-content: space-around;
+   
+}
+footer img{
+    margin-top: 15px;
+    max-width: 50px;
+    border-radius: 50%;
+}
+footer p{
+    font-family: "Ubuntu";
+    font-size: 2rem;
+    /* color: #fff; */
+}

@@ -1,0 +1,187 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(214, 214, 235, 0.678);
+}
+header{
+    background-color: rgba(9, 16, 63, 0.867);
+    display: flex;
+    justify-content: space-between;
+}
+.logo_head img{
+    max-width: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 10px;
+}
+nav{
+    margin-left: 585px;
+}
+nav ul{
+   
+    margin-top: 30px;
+    margin-left: 0px;
+}
+nav ul li{
+    list-style: none;
+    margin-right: 30px;
+    border: 1px solid  rgba(9, 16, 63, 0.867);
+    background-color: #fff;
+    border-radius: 15px;
+    height: 30px;
+ 
+}
+nav ul ul{
+    display: none;
+}
+nav ul ul li{
+    position: block;
+    margin-top: 1px;
+    border: none;
+    
+}
+nav ul li:hover{
+    border-radius: 15px 15px 0px 15px;
+    position: static;
+}
+nav ul li:hover ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.menu_head ul{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+.menu_head ul li{
+    list-style: none;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid rgba(9, 16, 63, 0.867) ;
+    background-color: #fff;
+    border-radius: 15px;
+    height: 25px;
+    width: auto;
+    transition: all 1s;
+
+}
+.menu_head ul li:hover{
+    background-color: #ccc;
+}
+
+li a{
+    
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0px 20px;
+   
+}
+h1{
+    color: #4245da;
+    text-align: center;
+    font-weight: bolder;
+    text-decoration: underline;
+    
+}
+form{
+    background-image: url("../image/Composant-13-10.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    height: 140%;
+    margin-left: 5rem;
+    border-radius: 2rem;
+
+}
+.formule{
+    display: flex;
+    padding-bottom: 5rem;
+    padding-top: 4rem;
+    margin-left: 10rem;
+}
+.formulaire{
+   
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 15rem; */
+    width: 100%;
+    /* margin-bottom: 4rem; */
+    
+}
+.formulaire1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+span{
+    color: red;
+}
+ label{
+    text-align: center;
+    font-size: 1.5rem;
+     margin-left: -10rem;
+    color: #fff;
+}
+input[type="email"]{
+    text-transform: lowercase;
+}
+select{
+    width: 70%;
+    text-transform: uppercase;
+    height: 45px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 150%;
+   
+    border-color: #fff;
+    color: #0c0c0c;
+    /* margin-left: -15rem; */
+}
+input{
+    width: 70%;
+    text-transform: uppercase;
+    height: 45px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 150%;
+    background-color:transparent;
+    border-color: #fff;
+    color: #fff;
+    /* margin-left: -15rem; */
+}
+input[type="submit"]{
+    width: 200px;
+    margin-left: 40%;
+    border-radius: 50px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: beige;
+    cursor: pointer;
+}
+footer{
+    background-color: #ccc;
+    margin: 0pc;
+    display: flex;
+    justify-content: space-around;
+   
+}
+footer img{
+    margin-top: 15px;
+    max-width: 50px;
+    border-radius: 50%;
+}
+footer p{
+    font-family: "Ubuntu";
+    font-size: 2rem;
+    /* color: #fff; */
+}
