@@ -162,18 +162,18 @@ aside .sidbar a:last-child{
     width: 100%;
 
 }
-aside .sidbar a.active{
+/* aside .sidbar a.active{
     background: var(--color-light);
     color: var(--color-primary);
     margin-left:0 ;
 
-}
-aside .sidbar a.active:before{
+} */
+/* aside .sidbar a.active:before{
     content: "";
     width: 6px;
     height: 100%;
     background: var(--color-primary);
-}
+} */
 
 aside .sidbar a.active img{
     color: var(--color-primary);
@@ -241,10 +241,10 @@ main .insights>div:hover{
 main .insights>div img{
     /* background: coral; */
     padding: 0.5rem;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     color: white;
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    /* height: 5rem; */
 }
 main .insights>div .midles{
     display: flex;

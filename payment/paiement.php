@@ -1,4 +1,5 @@
-<?php require("validepaie.php");?>
+<?php
+ require("validepaie.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,11 +53,11 @@
                     <input type="text" placeholder="Tapez votre prenom" name="prenom" autocomplete="off">
                 </div>
 
-                <div class="flex">
-                    <div class="inputBox">
+                <!-- <div class="flex"> -->
+                    <!-- <div class="inputBox">
                         <span>Niveau :</span>
                         <input type="text" placeholder="Doctorat" name="niveau" autocomplete="off">
-                    </div>
+                    </div> -->
                     <div class="inputBox">
                         <span>Filiere :</span>
                         <!-- <input type="text" placeholder="Bilogie" name="filiere" autocomplete="off"> -->
@@ -72,7 +73,7 @@
                             ?>
                         </select>
                     </div>
-                </div>
+                <!-- </div> -->
 
             </div>
 
@@ -96,8 +97,8 @@
                     </select>
                 </div>
                 <div class="inputBox">
-                    <span>Montant :</span>
-                    <input type="number" placeholder="Montant en FCFA" name="montant" autocomplete="off">
+                <span>Niveau :</span>
+                <input type="text" placeholder="Doctorat" name="niveau" autocomplete="off">
                 </div>
                 <div class="inputBox">
                     <span>Versement:</span>
@@ -110,8 +111,8 @@
 
                 <div class="flex">
                     <div class="inputBox">
-                        <span>Reste a payer :</span>
-                        <input type="number" placeholder="Reste en FCFA" name="reste" readonly value="4540">
+                        <!-- <span>Reste a payer :</span> -->
+                        <input type="hidden" placeholder="Reste en FCFA" name="reste" readonly value="4540">
                     </div>
                     <!-- <div class="inputBox">
                         <span>CVV :</span>

@@ -1,10 +1,23 @@
 <?php
     require_once('../admin/user/session.php');
     require_once('../html/config/database.php');
-    $query = "SELECT count(*) FROM professeur ";
+    $query = "SELECT * FROM professeur ";
     $result = $bd->prepare($query);
     $result->execute();
     $nprof=$result->rowCount();
+    $etu = "SELECT * FROM professeur ";
+    $result_etu = $bd->prepare($etu);
+    $result_etu->execute();
+    $netu=$result_etu->rowCount();
+
+    $requete = "SELECT montant FROM paiement";
+    $resultat = $bd->query($requete);
+
+    // Calcul du total
+    $total = 0;
+    while ($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
+        $total += $row['montant'];
+    }
 
    
 ?>
@@ -31,7 +44,7 @@
             </div>
             <div class="sidbar">
                 <a href="#">
-                    <img scr="../image/icone/maison.png">
+                    <img src="../image/icone/home.png" alt="">
                     <h3>Tableau de bord</h3>
                 </a>
                 <a href="../html/inscrire.php">
@@ -39,7 +52,7 @@
                     <h3>Inscription</h3>
                 </a>
                 <a href="notes/page_les_note.php">
-                    <img src="../image/icone/carnet.png" alt="">
+                    <img src="../image/icone/note.png" alt="">
                     <h3>Notes</h3>
                 </a>
                 <a href="../admin/etudiant/affich_etu.php">
@@ -47,19 +60,19 @@
                     <h3>Etudiants</h3>
                 </a>
                 <a href="../admin/matieres/page_les_matieres.php">
-                    <img src="../image/user-regular-24.png" alt="">
+                    <img src="../image/icone/livre.png" alt="">
                     <h3>Matieres</h3>
                 </a>
                 <a href="../payment/paiement.php" class="active">
-                    <img src="../image/menu-regular-24.png" alt="">
+                    <img src="../image/icone/cheque.png" alt="">
                     <h3>Paiements</h3>
                 </a>
                 <a href="user/affich_user.php">
-                    <img src="../image/user-regular-24.png" alt="">
+                    <img src="../image/icone/utilisateurs-alt.png" alt="">
                     <h3>Admministration</h3>
                 </a>
                 <a href="professeur/page_les_prof.php">
-                    <img src="../image/user-regular-24.png" alt="">
+                    <img src="../image/icone/utilisateurs-alt.png" alt="">
                     <h3>Professeur</h3>
                 </a>
                 <a href="user/deconnexion.php">
@@ -76,11 +89,11 @@
             </div>
             <div class="insights">
                 <div class="prof">
-                    <img src="../image/icone/cheque-dargent.png" alt="" srcset="">
+                    <img src="../image/icone/cheque.png" alt="" srcset="">
                     <div class="midles">
                         <div class="left">
-                            <h3>Total Enseignants</h3>
-                            <h1>24</h1>
+                            <h3>Montant Total</h3>
+                            <h1><?php echo($total) ?></h1>
                         </div>
                         <div class="progress">
                             <svg>
@@ -95,7 +108,7 @@
                 </div>
                 <!-- END OF ENSEIGNANTS -->
                 <div class="prof">
-                    <img src="../image/etudiant1.jpg" alt="" srcset="">
+                    <img src="../image/icone/utilisateurs-alt.png" alt="" srcset="">
                     <div class="midles">
                         <div class="left">
                             <h3>Total Enseignants</h3>
@@ -113,11 +126,11 @@
                     <small class="text-muted">Dernier mois</small>
                 </div>
                 <div class="prof">
-                    <img src="../image/etudiant1.jpg" alt="" srcset="">
+                    <img src="../image/icone/utilisateurs-alt.png" alt="" srcset="">
                     <div class="midles">
                         <div class="left">
-                            <h3>Total Enseignants</h3>
-                            <h1>24</h1>
+                            <h3>Total Etudiant</h3>
+                            <h1><?php echo($netu)?></h1>
                         </div>
                         <div class="progress">
                             <svg>
@@ -133,17 +146,17 @@
                 
             </div>
             <div class="personnelle">
-                <h2>La liste des etudiants</h2>
+                <h2>La liste de paiement</h2>
                 <table>
                     <thead>
                         <tr>
-                            <th title="Nom">Nom</thti>
-                            <th title="Prenom">Prenom</thti>
-                            <th title="Niveau">Niveau</thti>
-                            <th title="Mail">Mail</thti>
-                            <th title="Contact">Contact</thti>
-                            <th title="Sexe">Sexe</thti>
-                            <th title="Action">Action</thti>
+                            <th title="Nom">Matricule</th>
+                            <th title="Prenom">Nom</th>
+                            <th title="Niveau">Prenom</th>
+                            <th title="Mail">Mail</th>
+                            <th title="Contact">Monatant</th>
+                            <th title="Sexe">Versement</th>
+                            <!-- <th title="Action">Action</th> -->
                         </tr>
                     </thead>
                     <tbody>
@@ -152,7 +165,7 @@
                         <?php
                   
                     // Lire toutes les lignes de ma table etudiant
-                         $query = "SELECT * FROM etudiant";
+                         $query = "SELECT * FROM paiement";
                         $result = $bd->prepare($query);
                         $result->execute();
                         $results = $result->fetchAll();
@@ -165,15 +178,11 @@
                         echo("
                         <tr>
                         <td>$row[Matricule]</td>
-                        <td>$row[NomEtu]</td>
-                        <td>$row[PrenomEtu]</td>
-                        <td>$row[Mail]</td>
-                        <td>$row[Contact]</td>
-                        <td>$row[Sexe]</td>
-                        <td id='lien'>
-                            <a class='danger'  href='../html/delete_etu.php?id=$row[Matricule]'>Supprimer</a>
-                            <a  class='editer' href='../html/modif_etu.php?id=$row[Matricule]'>Modifier</a>
-                        </td>
+                        <td>$row[Nom]</td>
+                        <td>$row[Prenom]</td>
+                        <td>$row[Email]</td>
+                        <td>$row[Montant]</td>
+                        <td>$row[Num_versement]</td>
                         </tr>");
                     }
 

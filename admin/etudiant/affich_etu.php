@@ -30,8 +30,8 @@
         <section class="table__header">
             <h1>Etudiants de l'universite</h1>
             <div class="input-group">
-                <input type="search" placeholder="Rechercher utilisateur">
-                <img src="../../image/icone/editer.png" alt="">
+                <input type="search" placeholder="Rechercher etudiant">
+                <img src="../../image/icone/search-regular-24 (1).png" alt="">
             </div>
         </section>
         <section class="table__body">

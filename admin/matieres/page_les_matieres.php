@@ -4,13 +4,11 @@
 
 <?php
 		// include("../fonctions.php");
+		session_start();
 		
 		require('../../html/config/database.php');
 
-        $requete="SELECT * FROM matiere order by nom_mat";  
-        $result=$bd->prepare($requete);
-		$result->execute();
-	    $toutes_les_matieres=$result->fetchAll();  
+         
 		
 		
         
@@ -55,6 +53,10 @@
                     
                             <?php
 							if(isset($_SESSION['utilisateur'])){
+								$requete="SELECT * FROM matiere order by nom_mat";  
+								$result=$bd->prepare($requete);
+								$result->execute();
+								$toutes_les_matieres=$result->fetchAll(); 
 							
 							foreach($toutes_les_matieres as $matiere){
                                 $id_matiere=$matiere['nom_mat'];
@@ -69,7 +71,7 @@
                                     <td><?php echo $matiere['nombre_heure_th'] ?> </td>
                                     <td><?php echo $matiere['IdProf'] ?> </td>
                                     <td><?php echo $matiere['coef'] ?> </td>
-									<?php if(isset($_SESSION['utilisateur'])){?>
+									
 										<td> 					
 											<a href="page_edit_matiere.php?id_matiere=<?php echo $matiere['nom_mat']?>" 
 											class="btn btn-success btn-edit-delete">Modifier<span class="fa fa-pencil"></span> 
@@ -86,7 +88,7 @@
 									
                                 </tr>
                             <?php } ?>
-                            <?php } ?>
+                            
 								
 							<?php 
 								if(isset($_SESSION['etudiant'])){
@@ -99,7 +101,7 @@
 									$result_mat->execute([$matricule]);
 									$mat_etu = $result_mat->fetchAll();
 									foreach($mat_etu as $matieres){?>
-										<td><?php echo $matieres['f.nom_fil'] ?> </td>
+										<!-- <td><?php echo $matieres['f.nom_fil'] ?> </td> -->
 										<td> <?php echo $matieres['nom_mat'] ?></td>
                                     	<td><?php echo $matieres['nombre_heure_total'] ?> </td>
                                     	<td><?php echo $matieres['nombre_heure_tp'] ?> </td>
