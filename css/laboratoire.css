@@ -1,184 +1,74 @@
-body{
-    margin: 0px;
+*{
+    margin: 0;
+    padding: 0;
 }
-header{
-    background-color: rgba(9, 16, 63, 0.867);
+
+
+.hero{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.hero--video{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.hero--text--cover{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-}
-@font-face {
-    font-family: "Poppins";
-    src: url("../font/Poppins-Regular.ttf");
-}
-.logo_head img{
-    max-width: 80px;
-    cursor: pointer;
-    border-radius: 50%;
-    margin: 10px;
-}
-.menu_head ul{
-    display: flex;
-    gap: 5px;
+    align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
 }
-.menu_head ul li{
-    list-style: none;
-    margin: 10px;
-    padding: 5px;
-    border: 1px solid rgba(9, 16, 63, 0.867) ;
-    background-color: #fff;
-    border-radius: 15px;
-    height: 25px;
-    width: auto;
-    transition: all 1s;
-
-}
-.menu_head ul li:hover{
-    background-color: #ccc;
+.hero--text{
+    text-align: center;
+    color: #fff;
 }
 
-li a{
-    
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    text-decoration: none;
-    padding: 0px 20px;
-   
+.hero--text h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
-.pre{
-    width: 100%;
-    height:600px;
-    margin-top: -5px;
+.hero--text p{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
-.pre img{
-    width: 100%;
-    height: 80%;
+@keyframes typing{
+    0%{
+      width: 0ch;
+    }
+    50%{
+      width: 16ch;
+    }
+    100%{
+      width: 0ch;
+    }
+  }
+.hero--text  .job{
+    color: #fafdfa;
+    font-size: 40px;
+    margin: 5px 0;
+    margin-top: -4px;
+    display: flex;
+   }
+.hero--text .typing-text{
+    margin-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #1de2d1;
+    animation: typing 6s steps(15) infinite;
+  }
+   .typing-text span{
+    color: green;
+  }
 
-     filter: blur(80%); 
-    filter: contrast(90%);
-   filter: brightness(80%);
-}
-.pre h2{
-    margin-left: 25%;
-    margin-top: -30%;
-    color: #fff;
-    font-family: 'Poppins';
-    font-size: 55px;
-    filter: blur(100%);
-    filter: contrast(100%);
-   /* filter: brightness(100%) */
-   font-weight: 48;
-}
-.deux{
-    margin-bottom:170px;
-}
-.deux h1{
-    text-align: center;
-    border: 1Px solid orangered;
-    width: 70%;
-    margin-left: 10%;
-    /* margin-bottom: 150px;*/
-    padding: 20px;
-    font-size: 60px;
-    letter-spacing: 5px;
-}
- p{
-    margin: 0rem 5rem;
-    font-size: 15px;
-}
-.trois{
-    margin: 20px;
-    background-image: url("../image/hommenoir.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 600px;
-    margin-top: -150px;
-}
-.trois h2{
-    color: #fff;
-    margin-left: 10%;
-    padding-top: 15%;
-    font-size: 5rem;
-}
-.trois p{
-    color: #fff;
-    margin-left: 30%;
-  margin-top: -45px;
-  font-size: 2rem;
-}
-.disposition{
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    /* gap: 70px; */
-}
-.image1, .fleche{
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-.fleche div{
-    max-width: 30%;
-}
-.image1 div{
-    width: 30%;
-}
-.fleche img{
-    max-width: 100%;
-    filter: blur(0.9);
-}
-.image1 img{
-    width: 100%;
-    /* transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) ;
-    overflow: hidden; */
-}
-/* .image1 img:hover{
-    filter: grayscale(1);
-    
-} */
-.image1 h1{
-   text-align: center;
-}
-.temoin{
-    background-image: url("../image/project-7.jpg");
-    width: 100%;
-    height: 500px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.temoin img{
-    border-radius: 100%;
-    width: 100px;
-    z-index: 100;
-    margin-left: 45%;
-    margin-top: 7%;
-}
-.temoin h1{
-    color: #fff;
-    font-size:3rem;
-    text-align: center;
-}
-.temoin p{
-    text-align: center;
-    font-size: larger;
-    color: #fff;
-}
-footer{
-    background-color: #ccc;
-    margin: 0pc;
-    display: flex;
-    justify-content: space-around;
-   
-}
-footer img{
-    margin-top: 15px;
-    max-width: 50px;
-    border-radius: 50%;
-}
-footer p{
-    font-family: "Ubuntu";
-    font-size: 2rem;
-    /* color: #fff; */
-}
+  

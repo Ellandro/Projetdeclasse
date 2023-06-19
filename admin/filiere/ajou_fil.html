@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulaire de Filière</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    .form-group input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    .form-group input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulaire de Filière</h1>
+  
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label for="nom">Nom de filiere:</label>
+        <input type="text" id="nom" name="nom" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="niveau">Niveau/Diplôme:</label>
+        <input type="text" id="niveau" name="niveau" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="duree">Durée de Formation:</label>
+        <input type="text" id="duree" name="duree" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="frais_scolarite">Frais de Scolarité:</label>
+        <input type="text" id="frais_scolarite" name="frais_scolarite" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="frais_trimestre">Frais par Trimestre:</label>
+        <input type="text" id="frais_trimestre" name="frais_trimestre" required>
+      </div>
+      
+      <div class="form-group">
+        <input type="submit" value="Enregistrer">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
