@@ -41,9 +41,9 @@
 								  <th> TH  </th> 
 								 <th>Id Professeur</th>
                                 <th> Coeff</th>
-								<?php if(isset($_SESSION['utilisateur'])){?>	
+									
 									<th> Action</th>
-								<?php }?>
+								
 								
                                             
                             </tr>
@@ -52,7 +52,7 @@
                         <tbody>
                     
                             <?php
-							if(isset($_SESSION['utilisateur'])){
+							
 								$requete="SELECT * FROM matiere order by nom_mat";  
 								$result=$bd->prepare($requete);
 								$result->execute();
@@ -87,7 +87,7 @@
 									
 									
                                 </tr>
-                            <?php } ?>
+                            
                             
 								
 							<?php 
